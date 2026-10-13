@@ -20,7 +20,11 @@ import com.aurafit.aurafit_backend.repository.WorkoutRepository;
 
 @RestController
 @RequestMapping("/workouts")
-@CrossOrigin(origins = "http://localhost:5173")
+
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://aura-fit-360-frontend.vercel.app"
+})
 public class WorkoutController {
 
     private final WorkoutRepository workoutRepository;

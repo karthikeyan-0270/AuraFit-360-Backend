@@ -21,7 +21,12 @@ import com.aurafit.aurafit_backend.repository.UserRepository;
 
 @RestController
 @RequestMapping("/users")
-@CrossOrigin(origins = "http://localhost:5173")
+
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://aura-fit-360-frontend.vercel.app"
+})
+
 public class UserController {
 
     private final UserRepository userRepository;
